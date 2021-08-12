@@ -13,5 +13,4 @@ class Ride (
 
     fun calculateFare() =
         KmTravelled * FARE_PER_KM + minuteTravelled * FARE_PER_MINUTE + BOOKING_CHARGE
-
 }
