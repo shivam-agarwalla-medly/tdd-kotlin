@@ -1,7 +1,20 @@
 package com.example
 
-data class Invoice(
-    private val totalFare : Int,
-    private val numberOfRides : Int,
+class Invoice(listOfRides : List<Ride>)
+{
+    private val totalFare : Int
+    private val numberOfRides : Int
     private val averageFarePerRide : Double
-)
+
+    init{
+        totalFare=listOfRides.sumOf { it.calculateFare() }
+        numberOfRides=listOfRides.size
+        averageFarePerRide=totalFare.toDouble()/numberOfRides
+    }
+
+    fun getTotalFare() = totalFare
+
+    fun getNumberOfRides() = numberOfRides
+
+    fun getAverageFarePerRide() = averageFarePerRide
+}
