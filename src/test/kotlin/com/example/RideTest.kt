@@ -5,11 +5,11 @@ import io.kotest.matchers.shouldBe
 
 class RideTest: StringSpec({
 
-    "No Travel should give Total Fare as the booking fare only"{
+    "No Travel should give Fare as the booking fare only"{
         Ride(0, 0).calculateFare() shouldBe 5
     }
 
-    "A single Ride should give the correct Total Fare as per Logic"{
+    "A single Ride should give the correct Fare as per Logic"{
         Ride(5, 10).calculateFare() shouldBe 65
     }
 })
